@@ -1,1 +1,3 @@
 # Web-Proj
+* we'll do a quick rip off of the watani mall website...
+* NO FURTHER QUESTIONS
