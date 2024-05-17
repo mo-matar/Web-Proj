@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Information</title>
+    <script src="https://kit.fontawesome.com/d5fa305551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/payment_info_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<img src="../IMAGES/login.png">
+<form>
+    <div>
+        <Label class="labels">Address</Label>
+    </div>
+
+    <div>
+        <input class="inputs" required type="text" name="street" id="street" placeholder="Street, Area code">
+    </div>
+    <div>
+        <input class="inputs" required type="text" name="building" id="building" placeholder="Building code">
+    </div>
+
+    <div>
+        <a href="https://postcode.palestine.ps/" target="_blank">Don't know your area code?</a>
+    </div>
+
+    <div>
+        <label for="City">City:</label>
+        <select name="City" id="City">
+            <option value="Jerusalem">Jerusalem</option>
+            <option value="Bethlehem">Bethlehem</option>
+            <option value="Hebron">Hebron</option>
+            <option value="Jericho">Jericho</option>
+            <option value="Ramallah">Ramallah</option>
+            <option value="Nablus">Nablus</option>
+            <option value="Tulkarem">Tulkarem</option>
+            <option value="Jenin">Jenin</option>
+            <option value="Ghaza">Ghaza</option>
+        </select>
+    </div>
+
+    <div>
+        <Label class="labels">Payment options</Label>
+    </div>
+    <div>
+        <label for="cash"><i class="fa-solid fa-money-bill"></i></label>
+        <input class="radio" type="radio" value="Cash" name="payment_option" id="cash">
+
+        <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
+        <input class="radio" type="radio" value="Visa" name="payment_option" id="visa">
+
+        <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
+        <input class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard">
+
+    </div>
+    <div>
+        <input class="inputs" required type="text" name="cardnum" id="cardnum" placeholder="Card number">
+    </div>
+
+    <div>
+        <input class="inputs" required type="month"  name="expdate" id="expdate" placeholder="Expiry date">
+    </div>
+
+    <div>
+        <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
+    </div>
+    <div>
+        <button>
+            <a href="index.html" target="_self">Next</a>
+        </button>
+    </div>
+
+</form>
+
+</body>
+</html>

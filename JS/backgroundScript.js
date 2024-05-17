@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.style.backgroundColor = 'rgb(239, 249, 255)'; // Set initial background color to pink
+    document.body.style.backgroundColor = 'rgb(142, 210, 255)'; // Set initial background color to pink
 });
 
 document.addEventListener('scroll', function() {
@@ -10,11 +10,11 @@ document.addEventListener('scroll', function() {
 
     // Define the range of colors for the gradient
     const colorRange = [
-        { r: 239, g: 249, b: 255 }, // 239, 249, 255
-        { r: 215, g: 239, b: 255 },   // 215, 239, 255
-        { r: 190, g: 229, b: 255 },   // 190, 229, 255
+        { r: 142, g: 210, b: 255 } ,     // 142, 210, 255
         { r: 158, g: 216, b: 255 },     // 158, 216, 255
-        { r: 142, g: 210, b: 255 }      // 142, 210, 255
+        { r: 190, g: 229, b: 255 },   // 190, 229, 255
+        { r: 215, g: 239, b: 255 },   // 215, 239, 255
+        { r: 239, g: 249, b: 255 } // 239, 249, 255
     //     $tropical-indigo: rgba(171, 144, 255, 1);
     // $tropical-indigo-2: rgba(165, 153, 255, 1);
     // $vista-blue: rgba(158, 161, 255, 1);
