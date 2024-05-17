@@ -94,19 +94,23 @@ div{
     text-align: center;
 }
 .fa-facebook{
+    color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
     margin-left: 34%;
     padding-right: 35px;
 }
 .fa-x-twitter{
+    color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
     padding-right: 35px;
 }
 .fa-instagram{
+    color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
     padding-right: 35px;
 }
 .fa-telegram{
+    color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
     padding-right: 35px;
 }
