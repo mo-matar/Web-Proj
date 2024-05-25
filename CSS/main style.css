@@ -43,8 +43,10 @@ header {
     align-items: center;
     /*background-color: #d5d5d5;*/
     height: 75px;
-    background-color: rgba(213, 213, 213, 0.8); /* Adjust the opacity by changing the last value (0.8) */
+    background-color: rgba(213, 213, 213, 0.6); /* Adjust the opacity by changing the last value (0.8) */
     backdrop-filter: blur(3px);
+    background-image: linear-gradient(90deg, #4a70e3, #4b4088);
+
 }
 
 /*}*/
@@ -62,7 +64,7 @@ footer {
     /*position: fixed;*/
     bottom: 0;
     width: 100%;
-    /*background-image: linear-gradient(90deg, red, orange, yellow, green, blue, cyan ,purple, blueviolet);*/
+    background-image: linear-gradient(90deg, royalblue, darkslateblue);
 }
 
 .navbar {
@@ -85,7 +87,7 @@ footer {
     float: left;
     text-align: center;
     padding: 12px;
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 17px;
 

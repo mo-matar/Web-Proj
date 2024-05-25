@@ -23,7 +23,7 @@ body {
 
 .content {
     min-height: 200vh; /* Makes sure there's enough content to scroll */
-    position: absolute;
+    position: relative;
     padding-top: 150px;
     /*border: 1px black solid;*/
     width: 100%;
@@ -49,6 +49,8 @@ header {
     height: 75px;
     background-color: rgba(213, 213, 213, 0.6); /* Adjust the opacity by changing the last value (0.8) */
     backdrop-filter: blur(3px);
+    background-image: linear-gradient(90deg, #4a70e3, #4b4088);
+
 }
 
 /*}*/
@@ -68,7 +70,7 @@ footer {
     /*position: fixed;*/
     bottom: 0;
     width: 100%;
-    /*background-image: linear-gradient(90deg, red, orange, yellow, green, blue, cyan ,purple, blueviolet);*/
+    background-image: linear-gradient(90deg, royalblue, darkslateblue);
 }
 
 .navbar {
@@ -237,6 +239,7 @@ footer {
     overflow-x: hidden;
     border-radius: 10px;
     border: 3px #EFF9FF solid;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .payment{
@@ -246,6 +249,7 @@ footer {
     width: 48%;
     height: 500px;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .item{
@@ -253,12 +257,14 @@ footer {
     text-align: center;
     /*border: green 1px solid;*/
     height: 25%;
-    background: linear-gradient(to bottom,#8ED2FF,#EFF9FF);
+    background: linear-gradient(to bottom, #55a4ff, #e0e8ff);
     margin-bottom: 6px;
     border-radius: 12px;
     width: 95%;
     margin-right: auto;
     margin-left: auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
 }
 .icon{
     width: 90px;
@@ -285,11 +291,11 @@ footer {
 .total{
     text-align: right;
     vertical-align: center;
-    position: fixed;
+    position: absolute;
     z-index: 4;
     border-radius: 7px;
     border-color: black;
-    bottom: 0;
+    bottom: -50px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 10px;
