@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../CSS/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../JS/cart.js"></script>
+    <script src="../JS/backgroundScript.js"></script>
+    <script src="https://kit.fontawesome.com/d5fa305551.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+    <h1>
+
+        <div class="navbar">
+            <div>
+                <a class="#" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+                <a href="#"><i class="fa fa-bars" aria-hidden="true"></i> Categories</a>
+                <a target="_blank" href="https://www.facebook.com"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a class="#" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                <a style="justify-self: end" href="login.html" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
+            </div>
+            <div id="test"></div>
+            <!--        <div>-->
+            <!--            <img id="may god bless america" src="../IMAGES/logo.png">-->
+            <!--        </div>-->
+        </div>
+    </h1>
+</header>
+
+<main class="content">
+    <div class="container">
+
+    <div class="info">
+
+    <h1>Order Summary</h1>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="item">
+            <img src="../IMAGES/cpu.png" class="icon">
+            <p class="product_info">intel i7 9700k</p>
+            <p class="product_price">Price:$$$</p>
+        </div>
+
+        <div class="total">
+            <p style="position: absolute;left:0px;padding-left: 7px">Total:</p>
+            <p style="padding-right: 7px">$$$</p>
+        </div>
+
+    </div>
+
+    <div class="payment">
+        <h1>Payment information</h1>
+        <form>
+            <div>
+                <input class="inputs" required type="text" name="street" id="street" placeholder="Street, Area code">
+            </div>
+            <div>
+                <input class="inputs" required type="text" name="building" id="building" placeholder="Building code">
+            </div>
+
+            <div>
+                <a href="https://postcode.palestine.ps/" target="_blank">Don't know your area code?</a>
+            </div>
+
+            <div>
+                <label for="City">City:</label>
+                <select name="City" id="City">
+                    <option value="Jerusalem">Jerusalem</option>
+                    <option value="Bethlehem">Bethlehem</option>
+                    <option value="Hebron">Hebron</option>
+                    <option value="Jericho">Jericho</option>
+                    <option value="Ramallah">Ramallah</option>
+                    <option value="Nablus">Nablus</option>
+                    <option value="Tulkarem">Tulkarem</option>
+                    <option value="Jenin">Jenin</option>
+                    <option value="Ghaza">Ghaza</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cash"><i class="fa-solid fa-money-bill"></i></label>
+                <input class="radio" type="radio" value="Cash" name="payment_option" id="cash">
+
+                <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
+                <input class="radio" type="radio" value="Visa" name="payment_option" id="visa">
+
+                <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
+                <input class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard">
+
+            </div>
+            <div>
+                <input class="inputs" required type="text" name="cardnum" id="cardnum" placeholder="Card number">
+            </div>
+
+            <div>
+                <input class="inputs" required type="month"  name="expdate" id="expdate" placeholder="Expiry date">
+            </div>
+
+            <div>
+                <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
+            </div>
+            <div>
+                <button>
+                    <a href="index.html" target="_self">Next</a>
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Never Forget</p>
+</footer>
+<script src="../JS/slideshow.js"></script>
+</body>
+</html>

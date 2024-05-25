@@ -23,7 +23,10 @@ body {
 
 .content {
     min-height: 200vh; /* Makes sure there's enough content to scroll */
-    padding: 20px;
+    position: absolute;
+    padding-top: 150px;
+    /*border: 1px black solid;*/
+    width: 100%;
 }
 
 /*header {*/
@@ -45,6 +48,7 @@ header {
     /*background-color: #d5d5d5;*/
     height: 75px;
     background-color: rgba(213, 213, 213, 0.6); /* Adjust the opacity by changing the last value (0.8) */
+    backdrop-filter: blur(3px);
 }
 
 /*}*/
@@ -54,9 +58,7 @@ header h1 {
     width: 100%;
 }
 
-main {
-    padding: 20px;
-}
+
 
 footer {
     background-color: transparent;
@@ -209,38 +211,203 @@ footer {
 }
 
 
-#product_img{
-    width: 500px;
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    /*border: 1px blue solid;*/
     height: 500px;
-    float: left
+    position: relative;
+    /*background-color: rgba(112, 198, 255, 0.6);*/
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    color: white;
+    /*background: url("../IMAGES/login.png");*/
 }
 
-#buy{
-    float:left;
-    width: 100px;
-    height: 30px;
-    margin: 0px 25px;
-    font-size: 18px;
-    border-radius: 18px;
+.info{
+    /*border: 2px solid yellow;*/
+    left: 0;
+    width: 48%;
+    height: 500px;
+    float: left;
+    text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 10px;
+    border: 3px #EFF9FF solid;
+}
+
+.payment{
+    position: absolute;
+    /*border: 2px solid red;*/
+    right: 0;
+    width: 48%;
+    height: 500px;
+    text-align: center;
+}
+
+.item{
+    position: relative;
+    text-align: center;
+    /*border: green 1px solid;*/
+    height: 25%;
+    background: linear-gradient(to bottom,#8ED2FF,#EFF9FF);
+    margin-bottom: 6px;
+    border-radius: 12px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.icon{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.product_info{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    top: 10px;
+}
+
+.product_price{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    color: black;
+}
+
+.total{
+    text-align: right;
+    vertical-align: center;
+    position: fixed;
+    z-index: 4;
+    border-radius: 7px;
+    border-color: black;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    width: 40%;
+    background-color: rgba(112, 198, 255, 0.6) ;
+    backdrop-filter: blur(3px);
+    color: black;
+    left: 3%;
+    height: 40px;
+    padding-top: 8px;
+}
+
+
+form{
+    /*background-color: rgba(158, 216, 255,0.5);*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 50px 35px;
+    text-align: center;
+    border: 3px #EFF9FF solid;
+}
+form *{
+    font-family:'Poppins',sans-serif;
+    outline: none;
+    border: none;
+}
+form div{
+    margin-bottom: 10px;
+}
+
+.inputs{
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 100%;
+    padding: 0 1px;
+    margin-top: 4px;
+    border-radius: 14px;
+    font-size: 15px;
+    background-color: rgba(239, 249, 255,1);
+    text-align: center;
+    color: black;
+}
+
+.labels{
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-bottom: 7px;
+    margin-left: -6px;
+    color: white;
+}
+
+a{
+    text-align: center;
+}
+.radio{
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    appearance: none;
+}
+.radio:active{
+    box-shadow: 5px 5px 5px yellow;
+}
+.fa-money-bill{
+    position: relative;
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    margin-left:12%;
+    padding-right: 30px;
+}
+.fa-cc-visa{
+    position: relative;
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 30px;
+}
+.fa-cc-mastercard{
+    position: relative;
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 30px;
+}
+button{
+    width: 40%;
+    padding: 7px 0;
+    margin-top: -5px;
+    font-size: 14px;
+    border-radius: 9px;
     background-color:rgba(239, 249, 255,1);
+    text-align: center;
+    color: black;
 }
-
-#buy:hover{
+button:hover{
     background-color: #9ED8FF;
 }
+button a{
+    color: black;
+    text-decoration: none;
+}
 
-#qty{
-    float: left;
-    width: 38px;
-    height: 30px;
-    margin: 0px -15px;
-    border-radius: 18px;
-    font-size: 14px;
+a{
+    /*text-decoration: none;*/
+    color: black;
 }
-#price{
-    margin: 0px -500px;
-    font-weight: bold;
-    font-size: 20px
+a:hover{
+    color: white;
 }
+
+select{
+    color: black;
+}
+
+
 
 
