@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="../CSS/acount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../JS/backgroundScript.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5fa305551.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img src="../IMAGES/login.png">
+<header>
+    <h1>
+        <div class="navbar">
+            <div>
+
+                <a class="#" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+                <div class="dropdown" style="display: inline">
+                    <a href="#" class="categories">
+                        <i class="fa fa-bars" aria-hidden="true"></i> Categories
+                    </a>
+                    <div class="content_dorpdown">
+                        <a href="cpu.html">Processors</a>
+                        <a href="cpu.html">Graphic Cards</a>
+                        <a href="cpu.html">Memory</a>
+                        <a href="cpu.html">Motherboard</a>
+                        <a href="cpu.html">Power Supply</a>
+                        <a href="cpu.html">Case</a>
+                        <a href="cpu.html">Monitor</a>
+                        <a href="cpu.html">Keyboard</a>
+                        <a href="cpu.html">Mouse</a>
+                        <a href="cpu.html">Cpu Cooler</a>
+                        <a href="cpu.html">Hard Disk</a>
+                        <a href="cpu.html">SSD</a>
+                        <a href="cpu.html">Headset</a>
+                        <a href="cpu.html">Computer Accessories</a>
+                        <a href="cpu.html">Laptop</a>
+                        <a href="cpu.html">Laptop Accessories</a>
+                    </div>
+                </div>
+                <a target="_blank" href="https://www.facebook.com"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+                <a class="#" href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+                <a style="justify-self: end" href="login.html" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
+            </div>
+            <div id="test"></div>
+        </div>
+    </h1>
+</header>
+
+<main>
+
+<div class="contain" style="left: 15%">
+    <form action="">
+
+            <label class="labels" for="fname">Name</label>
+            <input class="text_name" type="text" id="fname" name="fname" required placeholder="First">
+            <input class="text_name" type="text" id="mname" name="mname" required placeholder="Middle">
+            <input class="text_name" type="text" id="lname" name="lname" placeholder="Last" required>
+
+
+            <label class="labels" for="email">Email</label>
+            <input class="inputs" required type="email" name="email" id="email" placeholder="example@mail.com">
+
+
+
+            <label class="labels" for="uname">Username</label>
+            <input class="inputs" type="text" id="uname" name="uname" required>
+
+
+
+            <label class="labels" for="pass">Password</label>
+            <input class="inputs" type="password" id="pass" name="pass" required>
+
+    </form>
+
+</div>
+
+    <div class="contain" style="right: 18%;">
+        <form action="">
+            <div>
+                <Label class="labels">Address</Label>
+            </div>
+
+            <div>
+                <input class="inputs" required type="text" name="street" id="street" placeholder="Street, Area code">
+            </div>
+            <div>
+                <input class="inputs" required type="text" name="building" id="building" placeholder="Building code">
+            </div>
+
+            <div>
+                <a href="https://postcode.palestine.ps/" target="_blank">Don't know your area code?</a>
+            </div>
+
+            <div>
+                <label for="City">City:</label>
+                <select name="City" id="City">
+                    <option value="Jerusalem">Jerusalem</option>
+                    <option value="Bethlehem">Bethlehem</option>
+                    <option value="Hebron">Hebron</option>
+                    <option value="Jericho">Jericho</option>
+                    <option value="Ramallah">Ramallah</option>
+                    <option value="Nablus">Nablus</option>
+                    <option value="Tulkarem">Tulkarem</option>
+                    <option value="Jenin">Jenin</option>
+                    <option value="Ghaza">Ghaza</option>
+                </select>
+            </div>
+
+            <div>
+                <Label class="labels">Payment options</Label>
+            </div>
+            <div>
+                <label for="cash"><i class="fa-solid fa-money-bill"></i></label>
+                <input class="radio" type="radio" value="Cash" name="payment_option" id="cash">
+
+                <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
+                <input class="radio" type="radio" value="Visa" name="payment_option" id="visa">
+
+                <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
+                <input class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard">
+
+            </div>
+            <div>
+                <input class="inputs" required type="text" name="cardnum" id="cardnum" placeholder="Card number">
+            </div>
+
+            <div>
+                <input class="inputs" required type="month"  name="expdate" id="expdate" placeholder="Expiry date">
+            </div>
+
+            <div>
+                <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
+            </div>
+
+        </form>
+
+    </div>
+<input type="submit" value="Confirm">
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Never Forget</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-attachment: fixed; /* Ensures the gradient moves with the content */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease;
+}
+
+.content {
+    min-height: 200vh; /* Makes sure there's enough content to scroll */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: rgba(213, 213, 213, 0.6); /* Adjust the opacity by changing the last value (0.8) */
+    backdrop-filter: blur(3px);
+    background-image: linear-gradient(90deg, #4a70e3, #4b4088);
+
+}
+
+/*}*/
+
+header h1 {
+    margin: 0;
+    width: 100%;
+}
+
+footer {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, royalblue, darkslateblue);
+}
+
+.navbar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    background: transparent;
+}
+
+/* Navbar links */
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+    background-color: #00444444;
+}
+
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+* {box-sizing:border-box}
+
