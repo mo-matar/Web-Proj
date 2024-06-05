@@ -20,9 +20,9 @@ body {
     transition: background 0.5s ease;
 }
 
-.content {
-    min-height: 200vh; /* Makes sure there's enough content to scroll */
-}
+/*.content {*/
+/*    min-height: 200vh; !* Makes sure there's enough content to scroll *!*/
+/*}*/
 
 
 header {
@@ -40,7 +40,6 @@ header {
 
 }
 
-/*}*/
 
 header h1 {
     margin: 0;
@@ -48,11 +47,13 @@ header h1 {
 }
 
 footer {
+    /*position: absolute;*/
     background-color: transparent;
     color: #fff;
     padding: 20px;
     text-align: center;
-    bottom: 0;
+    bottom: 0px;
+    margin-bottom: 0px;
     width: 100%;
     background-image: linear-gradient(90deg, royalblue, darkslateblue);
 }
@@ -63,6 +64,11 @@ footer {
     align-items: center;
     width: 100%;
     overflow: auto;
+    background: transparent;
+}
+
+#may\ god\ bless\ america{
+    height: 75px;
     background: transparent;
 }
 
@@ -84,6 +90,11 @@ footer {
 
 
 
+/* Current/active navbar link */
+.active {
+    /*background-color: #04AA6D;*/
+}
+
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 @media screen and (max-width: 500px) {
     .navbar a {
@@ -93,4 +104,33 @@ footer {
 }
 
 * {box-sizing:border-box}
+
+
+
+.dropdown a{
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown .content_dorpdown{
+    display: none;
+    position: absolute;
+    /*background-color: rgba(158, 216, 255,1);*/
+    background-image: linear-gradient(90deg, royalblue, darkslateblue);
+    max-width: 600px;
+    box-shadow: 2px 2px 5px hsla(0,0%,0%, 0.8);
+    top: 63px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content_dorpdown a{
+    font-family:'Poppins',sans-serif;
+    color: white;
+    width: 150px;
+}
+
+.dropdown:hover .content_dorpdown{
+    display: block;
+}
 
