@@ -6,9 +6,11 @@ if (!isset($_SESSION['valid']) || $_SESSION['valid'] == 0) {
     exit(); // Important to prevent further execution
 }
 
+
+
+$cardnum = '';
 $address = '';
 $paymenttype = '';
-$cardnum = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
