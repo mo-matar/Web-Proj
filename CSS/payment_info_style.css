@@ -1,3 +1,19 @@
+#next{
+    width: 40%;
+    padding: 15px 0;
+    margin-top: -10px;
+    font-size: 15px;
+    /*border-radius: 18px;*/
+    background-color:rgba(239, 249, 255,1);
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+}
+#next:hover{
+    background-color: #9ED8FF;
+}
+
 body{
     margin: 0px;
 }
@@ -29,6 +45,8 @@ div{
     margin-bottom: 20px;
 }
 
+
+
 .inputs{
     display: block;
     height: 40px;
@@ -56,43 +74,36 @@ a{
 .radio{
     /*-webkit-appearance: none;*/
     /*-moz-appearance: none;*/
-    appearance: none;
+    /*appearance: none;*/
+    margin-right: 40px;
 }
 .radio:active{
-    box-shadow: 5px 5px 5px yellow;
+    /*box-shadow: 5px 5px 5px yellow;*/
 }
-.fa-money-bill{
-    color: rgba(239, 249, 255,1);
-    transform: scale(2.5,2.5);
-    margin-left: 24%;
-    padding-right: 35px;
-}
-.fa-cc-visa{
-    color: rgba(239, 249, 255,1);
-    transform: scale(2.5,2.5);
-    padding-right: 35px;
-}
-.fa-cc-mastercard{
-    color: rgba(239, 249, 255,1);
-    transform: scale(2.5,2.5);
-    padding-right: 35px;
-}
-button{
-    width: 40%;
-    padding: 15px 0;
-    margin-top: -10px;
-    font-size: 15px;
-    border-radius: 18px;
-    background-color:rgba(239, 249, 255,1);
-    text-align: center;
-}
-button:hover{
-    background-color: #9ED8FF;
-}
+
+
 
 a{
     text-decoration: none;
 }
 a:hover{
     color:  rgba(239, 249, 255,1);
+}
+
+
+.fa-money-bill{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    margin-left: 15%;
+    padding-right: 5px;
+}
+.fa-cc-visa{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 5px;
+}
+.fa-cc-mastercard{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 5px;
 }
