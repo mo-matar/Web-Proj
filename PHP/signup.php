@@ -9,6 +9,7 @@ $uname ='';
 $email ='';
 $pass ='';
 $error=0;
+include("connection.php");
 $_SESSION["uname"]='';
 if(isset($_POST["fname"]) && isset($_POST["mname"])
     && isset($_POST["lname"]) && isset($_POST["uname"]) &&
@@ -24,11 +25,10 @@ if(isset($_POST["fname"]) && isset($_POST["mname"])
         $email = $_POST["email"];
         $_SESSION["uname"]= $_POST["uname"];
         try {
-            $db = new mysqli("localhost", "root", "", "web-proj");
             $qry1 = "SELECT * FROM customers";
             $qry2 = "INSERT INTO `customers` (`first_name`, `middle_name`, `last_name`, `email`,`username`, `password_hash`)".
                 " VALUES ('".$fname."','".$mname."','".$lname."','".$email."','".$uname."','".$pass."');";
-            $res=$db->query($qry1);
+            $res=$conn->query($qry1);
             for($i=0; $i < $res->num_rows; $i++){
 
             $resRow=$res->fetch_assoc();
@@ -37,9 +37,9 @@ if(isset($_POST["fname"]) && isset($_POST["mname"])
             }
                 }
             if(!$error){
-                $res=$db->query($qry2);
-                $db ->commit();
-                $db ->close();
+                $res=$conn->query($qry2);
+                $conn ->commit();
+                $conn ->close();
                 header("location:payment_info.php");
                 $_SESSION['valid']=1;
             }

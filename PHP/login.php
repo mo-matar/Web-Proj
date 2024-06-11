@@ -5,21 +5,22 @@ $_SESSION['valid']=0;
 $uname ='';
 $pass ='';
 $error=0;
+include("connection.php");
 if (isset($_POST["uname"]) && isset($_POST["pass"])){
     if( !empty($_POST["uname"]) && !empty($_POST["pass"])){
         $uname = $_POST["uname"];
         $pass = $_POST["pass"];
         $_SESSION["uname"]= $_POST["uname"];
         try {
-            $db = new mysqli("localhost", "root", "", "web-proj");
+            $conn = new mysqli("localhost", "root", "", "computer_store");
             $qry1 = "SELECT * FROM customers";
-            $res=$db->query($qry1);
-//            $db ->commit();
-//            $db ->close();
+            $res=$conn->query($qry1);
+//            $conn ->commit();
+//            $conn ->close();
             for($i=0; $i < $res->num_rows; $i++){
                 $resRow=$res->fetch_assoc();
                 if($resRow['username'] == $uname && $resRow['password_hash'] == $pass){
-                    header("location:../HTML/index.html");
+                    header("location:../PHP/index.php");
                 }
                 else{$error=1;}
 
