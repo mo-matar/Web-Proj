@@ -28,7 +28,7 @@ else{//no product id was given
 </head>
 <body>
 <?php include('header.php');?>
-
+computer_store
 <main style="padding: 100px; padding-bottom: 29.5px; overflow: hidden; width: 100%" class="content" >
     <?php
         while($row = $product->fetch_assoc()){//loop over one single product

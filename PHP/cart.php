@@ -48,13 +48,15 @@ if (isset($_POST['add_to_cart'])) {
     // Calculate the total
     calculateTotalCart();
 
-} else if (isset($_POST['remove_product'])) {
+}
+else if (isset($_POST['remove_product'])) {
     $product_id = $_POST['product_id'];
     unset($_SESSION['cart'][$product_id]);
     // Calculate the total
     calculateTotalCart();
 
-} else if (isset($_POST['edit_quantity'])) {
+}
+else if (isset($_POST['edit_quantity'])) {
     // Get id and quantity from the form below
     $product_id = $_POST['product_id'];
     $product_quantity = $_POST['product_quantity'];
@@ -68,7 +70,8 @@ if (isset($_POST['add_to_cart'])) {
     // Calculate the total
     calculateTotalCart();
 
-} else {
+}
+else {
     // User tried to get to this page from somewhere else
     // Optionally, redirect them to the index or another appropriate page
 }
