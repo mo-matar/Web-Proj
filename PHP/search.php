@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 <style>
     * {
@@ -157,7 +158,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<?php include('header.php') ?>
+<?php
+
+include('header.php') ?>
 <body id="this">
 
 <form action="products.php" method="get">

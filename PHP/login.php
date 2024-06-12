@@ -70,6 +70,8 @@ if (isset($_POST['uname']) && isset($_POST['pass']) ){
     <input required type="password" id="pass" name="pass" placeholder="Enter your password">
 
     <button id="login">Log In</button>
+    <br>
+    <a href="index.php" style="display: block; text-align: center; padding-top: 15px">Browse without logging in</a>
     <div>
         <label id="signup_l">Don't have an account?</label>
         <button type="submit" id="signup" name="signup">

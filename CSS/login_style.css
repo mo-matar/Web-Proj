@@ -65,7 +65,7 @@ form input{
     background-color: #9ED8FF;
 }
 #signup{
-    margin-top: 40px;
+    margin-top: 30px;
     background-color: transparent;
     margin-left: -5px;
     font-size: 15px;
@@ -81,7 +81,7 @@ a:hover{
 }
 #contact{
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-bottom: 14px;
     font-size: 16px;
     font-weight: 500;
