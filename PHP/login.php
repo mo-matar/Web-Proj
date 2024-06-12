@@ -6,11 +6,20 @@ $uname ='';
 $pass ='';
 $error=0;
 include("connection.php");
-if (isset($_POST["uname"]) && isset($_POST["pass"])){
-    if( !empty($_POST["uname"]) && !empty($_POST["pass"])){
-        $uname = $_POST["uname"];
-        $pass = $_POST["pass"];
-        $_SESSION["uname"]= $_POST["uname"];
+if(isset($_SESSION['logged_in'])){
+    unset($_SESSION['logged_in']);
+    unset($_SESSION['uname']);
+    unset($_SESSION['email']);
+    unset($_SESSION['user_id']);
+    unset($_SESSION['cart']);
+
+}
+
+if (isset($_POST['uname']) && isset($_POST['pass']) ){
+    if( !empty($_POST['uname']) && !empty($_POST['pass'])){
+        $uname = $_POST['uname'];
+        $pass = $_POST['pass'];
+        $_SESSION['uname']= $_POST['uname'];
         try {
             $conn = new mysqli("localhost", "root", "", "computer_store");
             $qry1 = "SELECT * FROM customers";
@@ -20,6 +29,9 @@ if (isset($_POST["uname"]) && isset($_POST["pass"])){
             for($i=0; $i < $res->num_rows; $i++){
                 $resRow=$res->fetch_assoc();
                 if($resRow['username'] == $uname && $resRow['password_hash'] == $pass){
+                    $_SESSION['user_id'] = $resRow['customer_id'];
+                    $_SESSION['logged_in'] = true;
+                    $_SESSION['email'] = $resRow['email'];
                     header("location:../PHP/index.php");
                 }
                 else{$error=1;}

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head >
@@ -11,49 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-<header>
-    <h1>
-
-        <div class="navbar">
-            <div>
-
-                <a class="#" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-                <div class="dropdown" style="display: inline">
-                    <a href="#" class="categories">
-                        <i class="fa fa-bars" aria-hidden="true"></i> Categories
-                    </a>
-                    <div class="content_dorpdown">
-                        <a href="cpu.php">Processors</a>
-                        <a href="cpu.html">Graphic Cards</a>
-                        <a href="cpu.html">Memory</a>
-                        <a href="cpu.html">Motherboard</a>
-                        <a href="cpu.html">Power Supply</a>
-                        <a href="cpu.html">Case</a>
-                        <a href="cpu.html">Monitor</a>
-                        <a href="cpu.html">Keyboard</a>
-                        <a href="cpu.html">Mouse</a>
-                        <a href="cpu.html">Cpu Cooler</a>
-                        <a href="cpu.html">Hard Disk</a>
-                        <a href="cpu.html">SSD</a>
-                        <a href="cpu.html">Headset</a>
-                        <a href="cpu.html">Computer Accessories</a>
-                        <a href="cpu.html">Laptop</a>
-                        <a href="cpu.html">Laptop Accessories</a>
-                    </div>
-                </div>
-                <a target="_blank" href="https://www.facebook.com"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-                <a class="#" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-                <a style="justify-self: end" href="../PHP/login.php" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
-            </div>
-            <div id="test"></div>
-            <!--        <div>-->
-            <!--            <img id="may god bless america" src="../IMAGES/logo.png">-->
-            <!--        </div>-->
-        </div>
-    </h1>
-</header>
-
+<?php include('header.php');?>
 <main style="padding-top: 75px" class="content">
     <div align="center">
         <div class="slideshow-container">
@@ -153,8 +114,8 @@
                             <img src="../IMAGES/cpu.png" class="mouse">
                         </div>
                         <div class="contentBox">
-                            <h3>Processors</h3>
-                            <a href="cpu.php" class="browse">Browse</a>
+                            <h3>PROCESSORS</h3>
+                            <a href="products.php?category=CPU" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -165,8 +126,8 @@
                             <img src="../IMAGES/gpu.png" class="mouse">
                         </div>
                         <div class="contentBox">
-                            <h3>Graphic cards</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <h3>GRAPHICS CARD</h3>
+                            <a href="products.php?category=GPU" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -178,7 +139,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Memory</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=memory" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -190,7 +151,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Motherboard</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=motherboard" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -204,7 +165,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Power supply</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=powersupply" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -216,7 +177,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Case</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=case" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -228,7 +189,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Monitor</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=monitor" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -240,7 +201,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Keyboard</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=keyboard" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -254,7 +215,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Mouse</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=mouse" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -266,7 +227,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Cpu cooler</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=cooler" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -278,7 +239,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Hard disk</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=hardDisk" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -290,7 +251,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Ssd</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=memory" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -304,7 +265,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Headset</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=headset" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -316,7 +277,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Computer accessories</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=accessories" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -328,7 +289,7 @@
                         </div>
                         <div class="contentBox">
                             <h3>Laptop</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <a href="products.php?category=laptop" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>
@@ -339,8 +300,8 @@
                             <img src="../IMAGES/laptopacc.png" class="mouse">
                         </div>
                         <div class="contentBox">
-                            <h3>Laptop accessories</h3>
-                            <a href="cpu.html" class="browse">Browse</a>
+                            <h3>Bags</h3>
+                            <a href="products.php?category=bags" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>

@@ -28,8 +28,9 @@ if(isset($_POST["fname"]) && isset($_POST["mname"])
             $qry1 = "SELECT * FROM customers";
             $qry2 = "INSERT INTO `customers` (`first_name`, `middle_name`, `last_name`, `email`,`username`, `password_hash`)".
                 " VALUES ('".$fname."','".$mname."','".$lname."','".$email."','".$uname."','".$pass."');";
-            $res=$conn->query($qry1);
+            $res=$conn->query($qry1);//might hash password using md5
             for($i=0; $i < $res->num_rows; $i++){
+
 
             $resRow=$res->fetch_assoc();
             if($resRow['username'] == $uname || $resRow['email'] == $email){

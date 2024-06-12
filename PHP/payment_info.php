@@ -112,7 +112,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
     </div>
     <div>
-        <input id="next" type="submit" value="next">
+        <?php if (isset($_SESSION["logged_in"])):
+            ?>
+            <a style="justify-self: end" href="login.php"><i class="fa fa-fw fa-user"></i> Logout</a>
+        <?php else: ?>
+            <a style="justify-self: end" href="../PHP/login.php" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
+        <?php endif; ?>
     </div>
 </form>
 </body>

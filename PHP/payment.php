@@ -1,7 +1,10 @@
 <?php
 session_start();
+if (!isset($_GET['order_status'])) {
+    header("location:index.php");
+    exit();
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,14 +20,14 @@ session_start();
 <img src="../IMAGES/login.png" alt="Background Image">
 <div class="cont">
     <div class="card px-4">
-        <p class="h8 py-3">Order Placed Successfully</p>
+        <p class="h8 py-3"><?php echo $_GET['order_status']; ?></p>
         <div class="row gx-3">
             <div class="col-12">
                 <br>
             </div>
             <div class="col-12">
                 <br>
-                <p>image here for bag i guess</p>
+                <p>Image here for bag I guess</p>
                 <br>
             </div>
             <div class="col-6">
@@ -34,8 +37,10 @@ session_start();
             </div>
             <div class="col-12">
                 <div class="btn btn-primary mb-3">
-                    <input class="submitPayment" type="submit"  value="$$$TOTAL">
-                    <span class="fas fa-arrow-right"></span>
+                    <form method="POST" action="process_payment.php">
+                        <input class="submitPayment" type="submit" value="Pay NOW $<?php echo $_SESSION['total']; ?>">
+                        <span class="fas fa-arrow-right"></span>
+                    </form>
                 </div>
             </div>
         </div>

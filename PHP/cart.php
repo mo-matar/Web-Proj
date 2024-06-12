@@ -17,9 +17,10 @@ if (isset($_POST['add_to_cart'])) {
     $product_price = filter_input(INPUT_POST, 'price', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $product_image = filter_input(INPUT_POST, 'image_url', FILTER_SANITIZE_URL);
     $product_quantity = filter_input(INPUT_POST, 'product_quantity', FILTER_SANITIZE_NUMBER_INT);
+    $stock_quantity = filter_input(INPUT_POST, 'stock_quantity', FILTER_SANITIZE_NUMBER_INT);
 
     // Check for valid inputs
-    if ($product_id && $product_name && $product_price && $product_image && $product_quantity) {
+    if ($product_id && $product_name && $product_price && $product_image && $product_quantity && $stock_quantity) {
 
         // Check if the product has already been added to the cart
         if (!array_key_exists($product_id, $_SESSION['cart'])) {
@@ -29,7 +30,8 @@ if (isset($_POST['add_to_cart'])) {
                 'product_name' => $product_name,
                 'product_price' => $product_price,
                 'product_image' => $product_image,
-                'product_quantity' => $product_quantity
+                'product_quantity' => $product_quantity,
+                'stock_quantity' => $stock_quantity
             ];
 
             $_SESSION['cart'][$product_id] = $product_array;
@@ -56,6 +58,7 @@ if (isset($_POST['add_to_cart'])) {
     // Get id and quantity from the form below
     $product_id = $_POST['product_id'];
     $product_quantity = $_POST['product_quantity'];
+
     // Get the current product array from the session
     $product_array = $_SESSION['cart'][$product_id];
     // Update the product quantity in the array
@@ -104,46 +107,7 @@ function calculateTotalCart() {
     </script>
 </head>
 <body>
-<header>
-    <h1>
-        <div class="navbar">
-            <div>
-                <a class="#" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-                <div class="dropdown" style="display: inline">
-                    <a href="#" class="categories">
-                        <i class="fa fa-bars" aria-hidden="true"></i> Categories
-                    </a>
-                    <div class="content_dorpdown">
-                        <a href="cpu.html">Processors</a>
-                        <a href="cpu.html">Graphic Cards</a>
-                        <a href="cpu.html">Memory</a>
-                        <a href="cpu.html">Motherboard</a>
-                        <a href="cpu.html">Power Supply</a>
-                        <a href="cpu.html">Case</a>
-                        <a href="cpu.html">Monitor</a>
-                        <a href="cpu.html">Keyboard</a>
-                        <a href="cpu.html">Mouse</a>
-                        <a href="cpu.html">Cpu Cooler</a>
-                        <a href="cpu.html">Hard Disk</a>
-                        <a href="cpu.html">SSD</a>
-                        <a href="cpu.html">Headset</a>
-                        <a href="cpu.html">Computer Accessories</a>
-                        <a href="cpu.html">Laptop</a>
-                        <a href="cpu.html">Laptop Accessories</a>
-                    </div>
-                </div>
-                <a target="_blank" href="https://www.facebook.com"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-                <a class="#" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-                <a style="justify-self: end" href="login.html" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
-            </div>
-            <div id="test"></div>
-            <!--        <div>-->
-            <!--            <img id="may god bless america" src="../IMAGES/logo.png">-->
-            <!--        </div>-->
-        </div>
-    </h1>
-</header>
+<?php include('header.php');?>
 
 <main class="content">
     <div class="container">
@@ -161,7 +125,7 @@ function calculateTotalCart() {
 
                         <form method="POST" action="cart.php">
                             <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
-                            <input type="number" name="product_quantity" style="width: 5%" value="<?php echo $value['product_quantity']; ?>" max="10">
+                            <input type="number" name="product_quantity" style="width: 5%" value="<?php echo $value['product_quantity']; ?>" max="<?php echo $value['stock_quantity']; ?>" min = "1">
                             <input type="submit" class="edit-btn" value="edit" name="edit_quantity">
                             <input type="hidden" name="product_id" value="<?php echo $value['product_id'];?>">
                             <input type="submit"  class="remove-btn" name="remove_product" value="remove">
