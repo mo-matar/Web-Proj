@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php  ?>
 
 <header>
     <h1>
@@ -7,7 +7,7 @@
             <div>
 
                 <a class="#" href="index.php"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+                <a href="search.php"><i class="fa fa-fw fa-search"></i> Search</a>
                 <div class="dropdown" style="display: inline">
                     <a href="#" class="categories">
                         <i class="fa fa-bars" aria-hidden="true"></i> Categories

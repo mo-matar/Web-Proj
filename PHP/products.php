@@ -19,7 +19,10 @@
             <tr>
                 <?php
                 // Include your database connection and fetch data
-                include('get_products_from_db.php');
+                if(isset($_GET['category']))
+                    include('get_products_from_db.php');
+                else if(isset($_GET['search']))
+                    include('get_products_search.php');
 
                 // Counter to track the number of products per row
                 $products_per_row = 3;
