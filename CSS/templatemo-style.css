@@ -254,7 +254,7 @@ thead {
   top: 50%;
   margin-left: -25px;
   margin-top: -25px;
-  z-index: 0;
+  z-index: 1000;
   padding: 14px;
   border-radius: 50%;
   background-color: rgba(57, 78, 100, 0.7);
@@ -266,7 +266,7 @@ thead {
   transition: all 0.2s ease;
 }
 .tm-avatar-container:hover .tm-avatar-delete-link {
-  /*display: block;*/
+  display: block;
 }
 .tm-col-avatar {
   max-width: 425px;
@@ -482,7 +482,7 @@ input[type="checkbox"]:focus {
   -o-border-radius: 0;
   border-radius: 0;
   padding: 15px;
-  background:  98% no-repeat #50657b;
+  background: url(../img/arrow-down.png) 98% no-repeat #50657b;
 }
 .custom-select:focus {
   outline: 0;
@@ -491,9 +491,9 @@ input[type="checkbox"]:focus {
   color: #6e6c6c;
   cursor: pointer;
 }
-/*.tm-trash-icon:hover {*/
-/*  color: #9f1321;*/
-/*}*/
+.tm-trash-icon:hover {
+  color: #9f1321;
+}
 .tm-footer {
   background-image: linear-gradient(90deg, royalblue, darkslateblue);
   padding-top: 30px;
