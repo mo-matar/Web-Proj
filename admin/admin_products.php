@@ -188,129 +188,129 @@ $product_count = 0;
                         <tr class="category-row" data-category="CPU">
                             <td class="tm-product-name">Processor</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="GPU">
                             <td class="tm-product-name">Graphic Card</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="memory">
                             <td class="tm-product-name">Memory</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="motherboard">
                             <td class="tm-product-name">Motherboard</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="powersupply">
                             <td class="tm-product-name">Power Supply</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="case">
                             <td class="tm-product-name">Case</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="monitor">
                             <td class="tm-product-name">Monitor</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="keyboard">
                             <td class="tm-product-name">Keyboard</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="mouse">
                             <td class="tm-product-name">Mouse</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="cooler">
                             <td class="tm-product-name">CPU Cooler</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="hardDisk">
                             <td class="tm-product-name">Hard Disk</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="ssd">
                             <td class="tm-product-name">SSD</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="headset">
                             <td class="tm-product-name">Headset</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="accessories">
                             <td class="tm-product-name">Computer Accessories</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="laptop">
                             <td class="tm-product-name">Laptop</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
                         <tr class="category-row" data-category="bags">
                             <td class="tm-product-name">Bags</td>
                             <td class="text-center">
-                                <a href="#" class="tm-product-delete-link">
-                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                </a>
+<!--                                <a href="#" class="tm-product-delete-link">-->
+<!--                                    <i class="far fa-trash-alt tm-product-delete-icon"></i>-->
+<!--                                </a>-->
                             </td>
                         </tr>
 

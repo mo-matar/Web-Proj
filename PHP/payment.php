@@ -46,6 +46,6 @@ if (!isset($_GET['order_status'])) {
         </div>
     </div>
 </div>
-<a class="orders_history" href="user_orders.php"><button id="orders_history_btn">View Order History</button></a>
+<a class="orders_history" href="user_orders.php" target="_blank"><button id="orders_history_btn">View Order History</button></a>
 </body>
 </html>
