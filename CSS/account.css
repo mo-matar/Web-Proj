@@ -67,10 +67,9 @@ form *{
 
 [type= "submit"]{
     position:absolute ;
-    width: 130px;
+    width: 155px;
     height: 45px;
-    background-color: yellow;
-    left: 45.4%;
+    left: 35%;
     top: 83%;
     border-radius: 18px;
     background-color:rgba(239, 249, 255,1);
@@ -78,4 +77,52 @@ form *{
 }
 [type= "submit"]:hover{
     background-color: #9ED8FF;
+}
+
+.orders_history{
+    position:absolute ;
+    left: 55%;
+    top: 83%;
+    text-decoration: none;
+    border: none;
+}
+#orders_history_btn{
+    width: 155px;
+    height: 45px;
+    border-radius: 18px;
+    background-color:rgba(239, 249, 255,1);
+    font-weight: bold;
+    color: black;
+    border: none;
+}
+
+#orders_history_btn:hover{
+    background-color: #9ED8FF;
+}
+
+.radio{
+    /*-webkit-appearance: none;*/
+    /*-moz-appearance: none;*/
+    /*appearance: none;*/
+    margin-right: 40px;
+}
+.radio:active{
+    /*box-shadow: 5px 5px 5px yellow;*/
+}
+
+.fa-money-bill{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    margin-left: 15%;
+    padding-right: 10px;
+}
+.fa-cc-visa{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 10px;
+}
+.fa-cc-mastercard{
+    color: rgba(239, 249, 255,1);
+    transform: scale(2.5,2.5);
+    padding-right: 10px;
 }

@@ -36,9 +36,10 @@
                 <a class="#" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
                 <?php if (isset($_SESSION["logged_in"])):
                     ?>
-                    <a style="justify-self: end" href="login.php"><i class="fa fa-fw fa-user"></i> Logout</a>
+                    <a style="justify-self: end" href="account.php"><i class="fa fa-fw fa-user"></i> Account</a>
+                    <a style="justify-self: end" href="login.php"><i class="fa fa-fw fa-sign-out"></i> Logout</a>
                 <?php else: ?>
-                    <a style="justify-self: end" href="../PHP/login.php" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
+                    <a style="justify-self: end" href="../PHP/login.php" target="_self"><i class="fa fa-fw fa-sign-in"></i> Login</a>
                 <?php endif; ?>
             </div>
             <div id="test"></div>

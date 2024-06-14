@@ -19,7 +19,7 @@ else {
         $total = $_SESSION['total'];
         $order_status = "Pending";
         $user_id = $_SESSION['user_id'];
-
+        $payment_option = $_POST['payment_option'];
         $stmt = $conn->prepare("INSERT INTO orders (total_amount,customer_id,order_date,order_status)
                             VALUES (?,?,?,?);");
         $stmt->bind_param("diss", $total, $user_id, $date, $order_status);
@@ -59,8 +59,14 @@ else {
         /*5 remove everything from cart --> delayed until payment is done*/
         //unset($_SESSION['cart']);
         /*6 inform user whether everything is fine or there is a problem*/
-        header('location:payment.php?order_status=order placed successfully');
-
+        $payment='';
+        if($payment_option!='Cash') {
+            header('location:payment.php?order_status=Order Placed Successfully!&payment_option=Pay Now');
+        }
+        else{
+            $payment='Pay on Delivery';
+            header('location:payment.php?order_status=Order Placed Successfully!&payment_option=Pay On Delivery');
+        }
     }
 }
 ?>

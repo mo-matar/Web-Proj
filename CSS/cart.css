@@ -26,7 +26,8 @@ border: 1px #2b2d30 solid;
     width: 10%;
     position: absolute;
     bottom: 5px;
-
+    top: 35%;
+    left: 42%;
 }
 .info{
     /*border: 2px solid yellow;*/
@@ -39,7 +40,7 @@ border: 1px #2b2d30 solid;
     overflow-x: hidden;
     border-radius: 10px;
     border: 3px #EFF9FF solid;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);*/
 }
 
 .payment{
@@ -64,6 +65,7 @@ border: 1px #2b2d30 solid;
     margin-right: auto;
     margin-left: auto;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    color: black;
 
 }
 .icon{
@@ -75,16 +77,18 @@ border: 1px #2b2d30 solid;
 }
 
 .product_info{
-    position: relative;
+    position: absolute;
     font-weight: bold;
     font-size: 20px;
-    top: 10px;
+    top: 20%;
+    left: 21%;
+    max-width: 150px;
 }
 
 .product_price{
     position: absolute;
     right: 10px;
-    bottom: 20px;
+    top: 42%;
     color: black;
 }
 
@@ -100,7 +104,8 @@ border: 1px #2b2d30 solid;
     margin-left: auto;
     margin-bottom: 10px;
     width: 40%;
-    background-color: rgba(112, 198, 255, 0.6) ;
+    /*background-color: rgba(112, 198, 255, 0.6) ;*/
+    background-image: linear-gradient(90deg, royalblue, darkslateblue);
     backdrop-filter: blur(3px);
     color: black;
     left: 3%;
@@ -120,6 +125,7 @@ form{
     left: 50%;
     text-align: center;
     border: 3px #EFF9FF solid;
+    padding-top: 39px;
 }
 form *{
     font-family:'Poppins',sans-serif;
@@ -159,29 +165,31 @@ a{
 .radio{
     /*-webkit-appearance: none;*/
     /*-moz-appearance: none;*/
-    appearance: none;
+    /*appearance: none;*/
+    margin-right: 40px;
 }
 .radio:active{
-    box-shadow: 5px 5px 5px yellow;
+    /*box-shadow: 5px 5px 5px yellow;*/
 }
 .fa-money-bill{
     position: relative;
     color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
-    margin-left:12%;
-    padding-right: 30px;
+    margin-left:11%;
+    /*left: 30%;*/
+    padding-right: 10px;
 }
 .fa-cc-visa{
     position: relative;
     color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
-    padding-right: 30px;
+    padding-right: 10px;
 }
 .fa-cc-mastercard{
     position: relative;
     color: rgba(239, 249, 255,1);
     transform: scale(2.5,2.5);
-    padding-right: 30px;
+    padding-right: 10px;
 }
 button{
     width: 40%;
@@ -215,12 +223,44 @@ select{
 
 
 .edit-btn {
-    top: 40%;
-    color: rgba(255, 222, 114, 0.92);
     text-decoration: none;
-    font-size: 15px;
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    background-color: transparent;
+    width: 10%;
     position: absolute;
+    bottom: 5px;
+    top: 35%;
+    left: 42%;
+}
+
+.edit-qty{
+    position: absolute;
+    top: 44%;
+    left: 63%;
+}
+
+.fa-trash{
+    position: absolute;
+    color: #ee7b6b;
+    transform: scale(1.7,1.7);
+    left: 50%;
+    top: 44%;
+}
+.fa-pen-to-square{
+    position: absolute;
+    right: 26.5%;
+    top: 44%;
+    color: rgba(255, 222, 114, 0.92);
+    transform: scale(1.7,1.7);
+}
+
+#placeOrderButton{
+    background-color: rgba(255, 222, 114, 0.92);
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px
+}
+
+#placeOrderButton:hover{
+    background-color:#55A4FFFF ;
+    color: white;
 }

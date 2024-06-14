@@ -117,7 +117,7 @@ $product_count = 0;
     <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-products">
-                <div class="tm-product-table-container">
+                <div style="height: 500px"   class="tm-product-table-container">
                     <table class="table table-hover tm-table-small tm-product-table">
                         <thead>
                         <tr>
@@ -174,9 +174,9 @@ $product_count = 0;
                 <a
                     href="admin_add-product.php"
                     class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
-                <button class="btn btn-primary btn-block text-uppercase">
-                    Delete selected products
-                </button>
+<!--                <button class="btn btn-primary btn-block text-uppercase">-->
+<!--                    Delete selected products-->
+<!--                </button>-->
             </div>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
@@ -185,7 +185,7 @@ $product_count = 0;
                 <div class="tm-product-table-container">
                     <table class="table tm-table-small tm-product-table">
                         <tbody>
-                        <tr>
+                        <tr class="category-row" data-category="CPU">
                             <td class="tm-product-name">Processor</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -193,16 +193,15 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="GPU">
                             <td class="tm-product-name">Graphic Card</td>
-                            <td class="hidden_category" style="display: none">GPU</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="memory">
                             <td class="tm-product-name">Memory</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -210,7 +209,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="motherboard">
                             <td class="tm-product-name">Motherboard</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -218,7 +217,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="powersupply">
                             <td class="tm-product-name">Power Supply</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -226,7 +225,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="case">
                             <td class="tm-product-name">Case</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -234,7 +233,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="monitor">
                             <td class="tm-product-name">Monitor</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -242,7 +241,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="keyboard">
                             <td class="tm-product-name">Keyboard</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -250,7 +249,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="mouse">
                             <td class="tm-product-name">Mouse</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -258,15 +257,15 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="tm-product-name">Cpu Cooler</td>
+                        <tr class="category-row" data-category="cooler">
+                            <td class="tm-product-name">CPU Cooler</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
                                     <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="hardDisk">
                             <td class="tm-product-name">Hard Disk</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -274,7 +273,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="ssd">
                             <td class="tm-product-name">SSD</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -282,7 +281,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="headset">
                             <td class="tm-product-name">Headset</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -290,7 +289,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="accessories">
                             <td class="tm-product-name">Computer Accessories</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -298,7 +297,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="laptop">
                             <td class="tm-product-name">Laptop</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -306,7 +305,7 @@ $product_count = 0;
                                 </a>
                             </td>
                         </tr>
-                        <tr>
+                        <tr class="category-row" data-category="bags">
                             <td class="tm-product-name">Bags</td>
                             <td class="text-center">
                                 <a href="#" class="tm-product-delete-link">
@@ -319,9 +318,12 @@ $product_count = 0;
                     </table>
                 </div>
                 <!-- table container -->
-                <button class="btn btn-primary btn-block text-uppercase mb-3">
-                    Add new category
+                <button id="showAllProducts" class="btn btn-primary btn-block text-uppercase mb-3">
+                    Show All Products
                 </button>
+<!--                <button class="btn btn-primary btn-block text-uppercase mb-3">-->
+<!--                    Add new category-->
+<!--                </button>-->
             </div>
         </div>
     </div>
@@ -413,6 +415,45 @@ $product_count = 0;
         });
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add click event listeners to category rows
+        document.querySelectorAll('.category-row').forEach(categoryRow => {
+            categoryRow.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default behavior of the anchor link if any
+
+                // Get the clicked category from data attribute
+                const clickedCategory = categoryRow.dataset.category;
+
+                // Loop through product table rows
+                document.querySelectorAll('.tm-product-table tbody tr').forEach(productRow => {
+                    const productCategory = productRow.querySelector('td:nth-child(6)').textContent; // Adjust this selector based on your table structure
+
+                    // Check if product category matches clicked category
+                    if (productCategory !== clickedCategory) {
+                        productRow.style.display = 'none'; // Hide rows that don't match
+                    } else {
+                        productRow.style.display = ''; // Show rows that match
+                    }
+                });
+            });
+        });
+
+        // Reset function to show all products
+        function resetProductTable() {
+            document.querySelectorAll('.tm-product-table tbody tr').forEach(productRow => {
+                productRow.style.display = ''; // Show all rows
+            });
+        }
+
+        // Add click event listener to 'Show All' button
+        document.getElementById('showAllProducts').addEventListener('click', function() {
+            resetProductTable(); // Call the function to show all products
+        });
+    });
+</script>
+
 
 </body>
 </html>

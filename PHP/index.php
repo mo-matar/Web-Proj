@@ -251,7 +251,7 @@ session_start();
                         </div>
                         <div class="contentBox">
                             <h3>Ssd</h3>
-                            <a href="products.php?category=memory" class="browse">Browse</a>
+                            <a href="products.php?category=ssd" class="browse">Browse</a>
                         </div>
                     </div>
                 </td>

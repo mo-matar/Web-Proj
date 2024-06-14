@@ -6,12 +6,15 @@ $uname ='';
 $pass ='';
 $error=0;
 include("connection.php");
+include("find_user.php");
 if(isset($_SESSION['logged_in'])){
     unset($_SESSION['logged_in']);
     unset($_SESSION['uname']);
     unset($_SESSION['email']);
     unset($_SESSION['user_id']);
     unset($_SESSION['cart']);
+    unset($_SESSION['admin']);
+    unset($_SESSION['total']);
 
 }
 
@@ -19,8 +22,11 @@ if (isset($_POST['uname']) && isset($_POST['pass']) ){
     if( !empty($_POST['uname']) && !empty($_POST['pass'])){
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
-        $_SESSION['uname']= $_POST['uname'];
         try {
+            if($uname=='admin' && $pass=='admin'){
+                $_SESSION['logged_in'] = true;
+                header('location:../admin/admin_index.php');
+            }
             $conn = new mysqli("localhost", "root", "", "computer_store");
             $qry1 = "SELECT * FROM customers";
             $res=$conn->query($qry1);
@@ -32,6 +38,8 @@ if (isset($_POST['uname']) && isset($_POST['pass']) ){
                     $_SESSION['user_id'] = $resRow['customer_id'];
                     $_SESSION['logged_in'] = true;
                     $_SESSION['email'] = $resRow['email'];
+                    $_SESSION['uname']= $_POST['uname'];
+                    $_SESSION['address']= $resRow['address'];
                     header("location:../PHP/index.php");
                 }
                 else{$error=1;}

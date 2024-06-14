@@ -1,4 +1,4 @@
-<?php
+    <?php
 session_start();
 if (!isset($_GET['order_status'])) {
     header("location:index.php");
@@ -27,7 +27,7 @@ if (!isset($_GET['order_status'])) {
             </div>
             <div class="col-12">
                 <br>
-                <p>Image here for bag I guess</p>
+                <i style="transform: scale(4,4)" class="fa-sharp fa-regular fa-circle-check"></i>
                 <br>
             </div>
             <div class="col-6">
@@ -38,13 +38,14 @@ if (!isset($_GET['order_status'])) {
             <div class="col-12">
                 <div class="btn btn-primary mb-3">
                     <form method="POST" action="process_payment.php">
-                        <input class="submitPayment" type="submit" value="Pay NOW $<?php echo $_SESSION['total']; ?>">
-                        <span class="fas fa-arrow-right"></span>
+                        <input class="submitPayment" type="submit" value="<?php echo $_GET['payment_option']; ?>  $<?php echo $_SESSION['total']; ?>">
+                        <span  class="fas fa-arrow-right"></span>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<a class="orders_history" href="user_orders.php"><button id="orders_history_btn">View Order History</button></a>
 </body>
 </html>

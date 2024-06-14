@@ -2,8 +2,12 @@
 session_start();
 //unset($_SESSION['cart']); // Clear the cart session
 // $_SESSION['cart'] = []; // Alternatively, reset to an empty array
-echo "Cart has been cleared for testing purposes.";
+//echo "Cart has been cleared for testing purposes.";
 // Check whether the user came to this page using the hidden form or not (clicked on add to cart button)
+
+if($_SESSION['logged_in'] != true){
+    header("location:login.php");
+}
 if (isset($_POST['add_to_cart'])) {
 
     // Initialize the cart array if it doesn't exist
@@ -124,14 +128,13 @@ function calculateTotalCart() {
                     <div class="item">
                         <img src="../IMAGES/<?php echo $value['product_image']; ?>" class="icon">
                         <p class="product_info"><?php echo $value['product_name']; ?></p>
-                        <p class="product_price">Subtotal: <?php echo $value['product_quantity'] * $value['product_price'];?></p>
-
+                        <p class="product_price">Subtotal: $<?php echo $value['product_quantity'] * $value['product_price'];?></p>
                         <form method="POST" action="cart.php">
                             <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
-                            <input type="number" name="product_quantity" style="width: 5%" value="<?php echo $value['product_quantity']; ?>" max="<?php echo $value['stock_quantity']; ?>" min = "1">
-                            <input type="submit" class="edit-btn" value="edit" name="edit_quantity">
+                            <input type="number" class="edit-qty" name="product_quantity" style="width: 5%" value="<?php echo $value['product_quantity']; ?>" max="<?php echo $value['stock_quantity']; ?>" min = "1">
+                            <i class="fa-solid fa-pen-to-square"><input type="submit" class="edit-btn" value="" name="edit_quantity"></i>
                             <input type="hidden" name="product_id" value="<?php echo $value['product_id'];?>">
-                            <input type="submit"  class="remove-btn" name="remove_product" value="remove">
+                            <i class="fa-solid fa-trash"> <input type="submit"  class="remove-btn" name="remove_product" value=""> </i>
                         </form>
                     </div>
                     <?php
@@ -141,8 +144,11 @@ function calculateTotalCart() {
             }
             ?>
             <div class="total">
-                <p style="position: absolute; left: 0px; padding-left: 7px">Total:</p>
-                <p style="padding-right: 7px"><?php echo $_SESSION['total']; ?></p>
+                <p style="position: absolute; left: 0px; padding-left: 7px; color: white">Total:</p>
+                <?php
+                if(isset($_SESSION['total'])){?>
+                <p style="padding-right: 7px; background-image: linear-gradient(90deg, royalblue, darkslateblue);color: white">$<?php echo $_SESSION['total']; ?></p>
+                <?php }?>
             </div>
         </div>
 
@@ -150,10 +156,10 @@ function calculateTotalCart() {
             <h1>Payment information</h1>
             <form method="POST" action="place_order.php">
                 <div>
-                    <input class="inputs" required type="text" name="name" id="usernameid" placeholder="user name">
+                    <input class="inputs" required type="text" name="name" id="usernameid" placeholder="user name" value="<?php echo $_SESSION['uname']; ?>">
                 </div>
                 <div>
-                    <input class="inputs" required type="text" name="address" id="street" placeholder="Street, Area code">
+                    <input class="inputs" required type="text" name="address" id="street" placeholder="Street, Area code" value="<?php echo $_SESSION['address']; ?>">
                 </div>
                 <div>
                     <a href="https://postcode.palestine.ps/" target="_blank">Don't know your area code?</a>
@@ -174,11 +180,14 @@ function calculateTotalCart() {
                 </div>
                 <div>
                     <label for="cash"><i class="fa-solid fa-money-bill"></i></label>
-                    <input class="radio" type="radio" value="Cash" name="payment_option" id="cash">
+                    <input required class="radio" type="radio" value="Cash" name="payment_option" id="cash" onclick="disable()">
+
                     <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
-                    <input class="radio" type="radio" value="Visa" name="payment_option" id="visa">
+                    <input required class="radio" type="radio" value="Visa" name="payment_option" id="visa" onclick="enable()">
+
                     <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
-                    <input class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard">
+                    <input required class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard" onclick="enable()">
+
                 </div>
                 <div>
                     <input class="inputs" required type="text" name="card_number" id="cardnum" placeholder="Card number">
@@ -190,8 +199,11 @@ function calculateTotalCart() {
                     <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
                 </div>
                 <div>
+                    <?php
+                    if(isset($_SESSION['total'])){?>
                     <input type="hidden" name="total_amount" value="<?php echo $_SESSION['total']; ?>">
-                    <input type="submit" id="placeOrderButton" name="place_order" style="background-color: rgba(255, 222, 114, 0.92); border-radius: 15px; padding: 10px 30px 10px 30px" value="Place Order">
+                    <?php }?>
+                    <input type="submit" id="placeOrderButton" name="place_order" value="Place Order">
                 </div>
             </form>
         </div>
@@ -202,5 +214,27 @@ function calculateTotalCart() {
     <p>&copy; 2024 Never Forget</p>
 </footer>
 <script src="../JS/slideshow.js"></script>
+<script>
+    function disable() {
+        document.getElementById('cardnum').disabled=true
+        document.getElementById('expdate').disabled=true
+        document.getElementById('code').disabled=true
+        document.getElementById('cardnum').required=false
+        document.getElementById('expdate').required=false
+        document.getElementById('code').required=false
+        document.getElementById('cardnum').value=''
+        document.getElementById('expdate').value=''
+        document.getElementById('code').value=''
+    }
+
+    function enable() {
+        document.getElementById('cardnum').disabled=false
+        document.getElementById('expdate').disabled=false
+        document.getElementById('code').disabled=false
+        document.getElementById('cardnum').required=true
+        document.getElementById('expdate').required=true
+        document.getElementById('code').required=true
+    }
+</script>
 </body>
 </html>

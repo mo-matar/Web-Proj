@@ -34,12 +34,12 @@
                 <td>
                     <div class="card">
                         <div class="imgBox">
-                            <a href="product.php">
+                            <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>">
                                 <img src="../IMAGES/<?php echo $row['image_url']?>" class="mouse"> </a>
                         </div>
                         <div class="contentBox">
                             <h3><?php echo $row['name']; ?></h3>
-                            <h2 class="price"><?php echo $row['price']; ?></h2>
+                            <h2 class="price">$<?php echo $row['price']; ?></h2>
                             <a href="<?php echo "single_product.php?product_id=". $row['product_id'];?>" class="buy">Buy Now</a>
                         </div>
                     </div>

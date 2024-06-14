@@ -11,38 +11,45 @@ if (!isset($_SESSION['valid']) || $_SESSION['valid'] == 0) {
 $cardnum = '';
 $address = '';
 $paymenttype = '';
+$phone='';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (
-        isset($_POST["city"]) && isset($_POST["street"]) && isset($_POST["building"]) &&
-        isset($_POST["payment_option"]) && isset($_POST["cardnum"])
+        isset($_POST["city"]) && isset($_POST["street"]) && isset($_POST["phone"])
     ) {
         if (
-            !empty($_POST["city"]) && !empty($_POST["street"]) && !empty($_POST["building"]) &&
-            !empty($_POST["payment_option"]) && !empty($_POST["cardnum"])
+            !empty($_POST["city"]) && !empty($_POST["street"]) && !empty($_POST["phone"])
         ) {
-            $address = $_POST["city"] . " " . $_POST["street"] . " " . $_POST["building"];
-            $paymenttype = $_POST["payment_option"];
-            $cardnum = $_POST["cardnum"];
-
+            $phone = $_POST["phone"];
+            $address = $_POST["street"] . ", " . $_POST["city"];
+            if (
+                isset($_POST["payment_option"])
+            ){
+            if (
+                !empty($_POST["payment_option"])
+            ) {
+                $paymenttype = $_POST["payment_option"];
+                $cardnum = $_POST["cardnum"];
+            }}
             try {
-                $db = new mysqli("localhost", "root", "", "web-proj");
+                $db = new mysqli("localhost", "root", "", "computer_store");
                 if ($db->connect_error) {
                     throw new Exception("Connection failed: " . $db->connect_error);
                 }
-                $qry = "UPDATE `customers` SET `address`=?, `card_number`=?, `card_type`=? WHERE `username` = ?";
+                $qry = "UPDATE `customers` SET `address`=?, `card_number`=?, `card_type`=?, `phone`=? WHERE `username` = ?";
                 $stmt = $db->prepare($qry);
                 if ($stmt === false) {
                     throw new Exception("Prepare failed: " . $db->error);
                 }
-                $stmt->bind_param("ssss", $address, $cardnum, $paymenttype, $_SESSION['uname']);
+                $stmt->bind_param("sssss", $address, $cardnum, $paymenttype, $phone, $_SESSION['uname']);
                 if (!$stmt->execute()) {
                     throw new Exception("Execute failed: " . $stmt->error);
                 }
                 $stmt->close();
                 $db->close();
                 echo "Success";
-                header("location:login.php");
+                $_SESSION["logged_in"]=true;
+                header("location:index.php");
                 exit(); // Important to prevent further execution
             } catch (Exception $e) {
                 echo "Error: " . $e->getMessage();
@@ -66,13 +73,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <img src="../IMAGES/login.png">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
     <div>
-        <Label class="labels">Address</Label>
+        <Label class="labels">Address/Contact info</Label>
     </div>
     <div>
-        <input class="inputs" required type="text" name="street" id="street" placeholder="Street, Area code">
+        <input class="inputs" required type="text" name="street" id="street" placeholder="Street, Area code, Building code">
     </div>
     <div>
-        <input class="inputs" required type="text" name="building" id="building" placeholder="Building code">
+        <input class="inputs" required type="text" name="phone" id="phone" placeholder="Phone Number">
     </div>
     <div>
         <a href="https://postcode.palestine.ps/" target="_blank">Don't know your area code?</a>
@@ -96,29 +103,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <div>
         <label for="cash"><i class="fa-solid fa-money-bill"></i></label>
-        <input class="radio" type="radio" value="Cash" name="payment_option" id="cash">
+        <input required class="radio" type="radio" value="Cash" name="payment_option" id="cash" onclick="disable()">
         <label for="visa"><i class="fa-brands fa-cc-visa"></i></label>
-        <input class="radio" type="radio" value="Visa" name="payment_option" id="visa">
+        <input required class="radio" type="radio" value="Visa" name="payment_option" id="visa" onclick="enable()">
         <label for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
-        <input class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard">
+        <input required class="radio" type="radio" value="Mastercard" name="payment_option" id="mastercard" onclick="enable()">
     </div>
     <div>
-        <input class="inputs" required type="text" name="cardnum" id="cardnum" placeholder="Card number">
+        <input class="inputs" type="text" name="cardnum" id="cardnum" placeholder="Card number">
     </div>
     <div>
-        <input class="inputs" required type="month" name="expdate" id="expdate" placeholder="Expiry date">
+        <input class="inputs" type="month" name="expdate" id="expdate" placeholder="Expiry date">
     </div>
     <div>
-        <input class="inputs" required type="password" name="code" id="code" placeholder="Security code">
+        <input class="inputs" type="password" name="code" id="code" placeholder="Security code">
     </div>
     <div>
-        <?php if (isset($_SESSION["logged_in"])):
-            ?>
-            <a style="justify-self: end" href="login.php"><i class="fa fa-fw fa-user"></i> Logout</a>
-        <?php else: ?>
-            <a style="justify-self: end" href="../PHP/login.php" target="_self"><i class="fa fa-fw fa-user"></i> Login</a>
-        <?php endif; ?>
+        <input type="submit" value="Confirm">
+<!--        --><?php //if (isset($_SESSION["logged_in"])):
+//            ?>
+<!--            <a style="justify-self: end" href="login.php"> Confirm</a>-->
+<!--        --><?php //else: ?>
+<!--            <a style="justify-self: end" href="login.php" target="_self"> Confirm</a>-->
+<!--        --><?php //endif; ?>
     </div>
 </form>
+<script>
+    function disable() {
+        document.getElementById('cardnum').disabled=true
+        document.getElementById('expdate').disabled=true
+        document.getElementById('code').disabled=true
+        document.getElementById('cardnum').required=false
+        document.getElementById('expdate').required=false
+        document.getElementById('code').required=false
+        document.getElementById('cardnum').value=''
+        document.getElementById('expdate').value=''
+        document.getElementById('code').value=''
+    }
+
+    function enable() {
+        document.getElementById('cardnum').disabled=false
+        document.getElementById('expdate').disabled=false
+        document.getElementById('code').disabled=false
+        document.getElementById('cardnum').required=true
+        document.getElementById('expdate').required=true
+        document.getElementById('code').required=true
+    }
+</script>
 </body>
 </html>

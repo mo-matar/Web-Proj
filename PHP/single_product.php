@@ -51,7 +51,7 @@ computer_store
         </form>
 
 
-        <p id="price">Product price: <?php echo $row['price']; ?></p>
+        <p id="price">Product price: $<?php echo $row['price']; ?></p>
     </div>
     <?php }?>
 </main>

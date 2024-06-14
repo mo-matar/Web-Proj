@@ -28,7 +28,7 @@ img {
 .submitPayment {
     background-color: transparent;
     border: none;
-    color: white; /* Font color set to white */
+    color: black; /* Font color set to white */
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -36,16 +36,26 @@ img {
     width: 100%;
     text-align: center;
     transition: color 0.3s ease;
+    height: 36px;
+    /*position: absolute;*/
+    /*left: 2%;*/
+    /*top: 62%;*/
+}
+
+.fa-arrow-right{
+color: black;
 }
 
 .card {
     max-width: 700px;
     width: 120%;
-    margin: auto;
+    margin-left: -10%;
+    margin-top: -6%;
     color: black;
     border-radius: 20px;
     background-color: rgba(158, 216, 255, 0.5);
     padding: 50px 35px;
+    padding-bottom: 20px;
 }
 
 p {
@@ -56,6 +66,7 @@ p {
     font-size: 30px;
     font-weight: 800;
     text-align: center;
+    justify-content: center;
 }
 
 .h8 {
@@ -67,16 +78,19 @@ p {
 
 .btn.btn-primary {
     width: 100%;
-    height: 70px;
+    height: 80px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    /*align-items: center;*/
+    /*text-align: center;*/
+    justify-content: center;
     padding: 0 15px;
     background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
     border: none;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
+    margin-top: 25px;
+    border-radius: 20px;
 }
 
 .btn.btn-primary:hover {
@@ -89,6 +103,8 @@ p {
     transform: translate(12px);
     transition: transform 0.2s ease-in;
 }
+
+
 
 .form-control {
     color: white;
@@ -117,4 +133,27 @@ p {
     font-size: 14px;
     font-weight: 600;
     color: #cfcfcf;
+}
+
+.orders_history{
+    position:absolute ;
+    left: 45%;
+    top: 83%;
+    text-decoration: none;
+    border: none;
+}
+#orders_history_btn{
+    width: 155px;
+    height: 45px;
+    border-radius: 18px;
+    /*background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%)*/
+    background-color:rgba(239, 249, 255,1);
+    font-weight: bold;
+    color: black;
+    border: none;
+}
+
+#orders_history_btn:hover{
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+    /*background-color:rgba(239, 249, 255,1);*/
 }
