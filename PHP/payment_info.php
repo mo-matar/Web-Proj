@@ -48,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->close();
                 $db->close();
                 echo "Success";
-                $_SESSION["logged_in"]=true;
+                $_SESSION["address"] = $address;
+                $_SESSION['logged_in'] = true;
                 header("location:index.php");
                 exit(); // Important to prevent further execution
             } catch (Exception $e) {

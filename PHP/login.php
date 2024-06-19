@@ -83,7 +83,7 @@ if (isset($_POST['uname']) && isset($_POST['pass']) ){
     <div>
         <label id="signup_l">Don't have an account?</label>
         <button type="submit" id="signup" name="signup">
-            <a href="../PHP/signup.php" target="_blank">Sign up</a>
+            <a href="../PHP/signup.php" target="_self">Sign up</a>
         </button>
     </div>
     <label id="contact">Contact us:</label>

@@ -131,7 +131,7 @@ $product_count = 0;
                         </thead>
                         <tbody>
                         <?php
-
+//                        global $featured_products;
                         while ($row = $featured_products->fetch_assoc()) {
                             ?>
                             <tr>

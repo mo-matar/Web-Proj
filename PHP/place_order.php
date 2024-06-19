@@ -8,6 +8,8 @@ if(!isset($_SESSION['logged_in'])){
 
 }
 else {
+    include('find_user.php');
+    $_SESSION['user_id']=find_id($_SESSION['uname']);
 
 
     if (isset($_POST['place_order'])) {
@@ -30,7 +32,7 @@ else {
         }
         /*2 issue new order and store order info in db*/
 
-        $order_id = $conn->insert_id;//this returns the id of the inserted oreder
+        $order_id = $conn->insert_id;//this returns the id of the inserted order
         echo $order_id;
         $_SESSION['order_id'] = $order_id;
         /*3 get products from cart from session*/
