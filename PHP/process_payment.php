@@ -43,6 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Clear the cart
             unset($_SESSION['cart']);
+            unset($_SESSION['total']);
 
             // Redirect to success page
             echo "<script>alert('Payment Successful')</script>";

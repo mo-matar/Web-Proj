@@ -26,7 +26,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) &&
             $conn ->commit();
             $conn ->close();
 //            echo '<script>alert("Product successfully updated");</script>';
-            header("location:../admin/admin_accounts.ph");
+            header("location:../admin/admin_accounts.php");
         }
         catch (Exception $e){
             echo $e->getMessage();
