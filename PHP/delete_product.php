@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $conn ->close();
         header("location:../admin/admin_products.php");
     }
-    catch (Exception $e) {}
+    catch (Exception $e) {
+
+    }
 }
 ?>

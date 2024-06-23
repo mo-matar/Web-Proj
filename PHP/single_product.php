@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('connection.php');
 if(isset($_GET['product_id'])){
     $stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");

@@ -24,7 +24,7 @@
                         <a href="products.php?category=mouse">Mouse</a>
                         <a href="products.php?category=cooler">Cpu Cooler</a>
                         <a href="products.php?category=hardDisk">Hard Disk</a>
-                        <a href="products.php?category=memory">SSD</a>
+                        <a href="products.php?category=ssd">SSD</a>
                         <a href="products.php?category=headset">Headset</a>
                         <a href="products.php?category=accessories">Computer Accessories</a>
                         <a href="products.php?category=laptop">Laptop</a>
